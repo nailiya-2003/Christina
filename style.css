@@ -527,5 +527,24 @@ span {
       display:inline-block;
       width:100%;
       height:158px;
-      
+}
+
+@media (max-width: 1285px) {
+    html {
+        font-size: 55%;
+    }
+    .services-container {
+        padding-bottom: 7rem;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 0 5rem;
+    }
+    .project-box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .project-box img{
+        min-width: 30vw;
+    }
+}
+@media (max-width: 992px) {
+    
 }
