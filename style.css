@@ -380,20 +380,21 @@ span {
     font-size: 7rem;
 }
 .projects {
-   background: linear-gradient(var(--bg-color), var(--main-color));
+   background: linear-gradient(var(--bg-color),var(--bg-color), var(--main-color),var(--bg-color), var(--bg-color));
 
 }
 .project-box {
    display: grid;
    grid-template-columns: repeat(3, 1fr);
    place-items: center;
-   margin: 0 5rem;
+   
    gap: 3rem;
    row-gap: 5rem;
+  
 }
 .project-card {
     height: 600px;
-    min-width: 450px;
+    width: 350px;
     background-color: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(30px);
     border: 2px solid var(--main-color);
@@ -404,4 +405,127 @@ span {
     justify-content: center;
     padding: 5rem 2rem;
     overflow: hidden;
+    box-shadow: 0 0 5px var(--main-color);
+}
+.project-card:hover {
+    box-shadow: 0 0 25px var(--main-color),
+    0 0 50px var(--main-color);
+    transform: scale(1.02);
+}
+.project-card img {
+    max-width: 18vw;
+    object-fit: cover;
+}
+.project-card h3 {
+    font-size: 3rem;
+    margin: 1.5rem 0 0 0;
+}
+.project-card p {
+    font-size: 1.6rem;
+    margin: 1.8rem 0;
+}
+.project-card .btn {
+    font-size: 1.6rem;
+    margin: 1rem 0;
+}
+.contact {
+    background-color: var(--bg-color)
+}
+.contact h2 {
+    margin-bottom: 3rem;
+    color: var(--text-color);
+}
+.contact form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    margin: 5rem auto;
+    text-align: center;
+}
+.contact form .input-box{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.contact form .input-box input, .contact form textarea {
+    width: 100%;
+    padding: 2.5rem;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    background: var(--bg-color);
+    border-radius: 2rem;
+    border: 2px solid var(--main-color);
+    margin: 1.5rem 0;
+    resize: none;
+}
+.contact form .btn {
+    margin-top: 2rem;
+}
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: var(--bg-second-color);
+}
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+}
+.footer .social ul a  {
+    font-size: 25px;
+    /* color: var(--main-color);
+    border: 2px solid var(--bg-color); */
+    height: 42px;
+    line-height: 42px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: 0.3s ease;
+}
+.footer .social-icons a:hover {
+    transform: scale(1.03)translateY(-10px);
+    color: black;
+    background-color: var(--main-color);
+    box-shadow: 0 0 25px var(--main-color);
+}
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+.footer ul li{
+    display: inline;
+}
+.footer ul li a {
+    color: white;
+    border-bottom: 3px solid transparent;
+    transition: 0.3s ease;
+}
+.footer ul li a:hover {
+    border-bottom: 3px solid var(--main-color);
+}
+#wave-el-1 {
+        --c: var(--main-color);   /* Цвет */
+        --t:6px;   /* Толщина */
+        --h:80px;  /* Высота (расстояние по вертикали между двумя кривыми) */
+        --w:420px; /* Ширина  */
+        --p:6.5px; 
+        background:
+        radial-gradient(farthest-side at 50% calc(0% - var(--p)), transparent 45%, var(--c) 48% calc(48% + var(--t)),transparent calc(52% + var(--t))),
+        radial-gradient(farthest-side at 50% calc(100%   + var(--p)), transparent 45%, var(--c) 50% calc(50% + var(--t)),transparent calc(52% + var(--t)))
+       ;
+        
+      background-size:var(--w) var(--h);
+      background-position:calc(var(--w)/2) calc(var(--h)/2),0px calc(var(--h)/2);
+      margin:5px 0;
+      display:inline-block;
+      width:100%;
+      height:158px;
+      
 }
